@@ -1,0 +1,37 @@
+{
+  "manifest_version": 2,
+  "name": "autofut",
+  "version": "1.0",
+  "permissions": [
+    "storage",
+    "webRequestBlocking",
+    "webRequest",
+    "https://www.ea.com/fifa/ultimate-team/web-app/*",
+    "*://www.ea.com/fifa/ultimate-team/web-app/*",
+    "*://www.accounts.ea.com/*",
+    "*://utas.mob.v1.fut.ea.com/*"
+  ],
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.ea.com/fifa/ultimate-team/web-app/*",
+        "*://www.ea.com/fifa/ultimate-team/web-app/*",
+        "*://www.accounts.ea.com/*",
+        "*://utas.mob.v1.fut.ea.com/*"
+      ],
+      "js": [
+        "content_scripts/bundle.js"
+      ],
+      "run_at": "document_end",
+      "all_frames": false
+    }
+  ],
+  "web_accessible_resources": [
+    "page_scripts/page_script.js"
+  ]
+}

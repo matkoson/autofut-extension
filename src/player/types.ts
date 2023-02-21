@@ -1,0 +1,43 @@
+export type Player = {
+  id: number
+  timestamp: number
+  formation: string
+  untradeable: boolean
+  assetId: number
+  rating: number
+  itemType: string
+  resourceId: number
+  owners: number
+  discardValue: number
+  itemState: string
+  cardsubtypeid: number
+  lastSalePrice: number
+  injuryType: string
+  injuryGames: number
+  preferredPosition: string
+  contract: number
+  teamid: number
+  rareflag: number
+  playStyle: number
+  leagueId: number
+  assists: number
+  lifetimeAssists: number
+  loans: number
+  loyaltyBonus: number
+  pile: number
+  nation: number
+  marketDataMinPrice: number
+  marketDataMaxPrice: number
+  resourceGameYear: number
+  guidAssetId: string
+  attributeArray: number[]
+  statsArray: number[]
+  lifetimeStatsArray: number[]
+  skillmoves: number
+  weakfootabilitytypecode: number
+  attackingworkrate: number
+  defensiveworkrate: number
+  preferredfoot: number
+  possiblePositions: string[]
+}
+export type pls = Player[]

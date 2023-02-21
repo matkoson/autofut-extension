@@ -1,0 +1,77 @@
+{
+  "extends": "./tsconfig.build.json",
+  "compilerOptions": {
+    "paths": {
+      "@ui": [
+        "./UI"
+      ],
+      "@api": [
+        "./api"
+      ],
+      "@storage": [
+        "./storage"
+      ],
+      "@injection": [
+        "./injection"
+      ],
+      "@connector": [
+        "./connector"
+      ],
+      "@logger": [
+        "./logger"
+      ],
+      "@navigation": [
+        "./navigation"
+      ],
+      "@screens/*": [
+        "./screens/*"
+      ],
+      "@selectors": [
+        "./selectors"
+      ],
+      "@shared": [
+        "./shared"
+      ],
+      "@state": [
+        "./state"
+      ],
+      "@data": [
+        "./data"
+      ],
+      "@settings": [
+        "./settings"
+      ],
+      "@utils": [
+        "./utils"
+      ],
+      "@root": [
+        "./*"
+      ],
+      "@observer": [
+        "./utils/observer"
+      ],
+      "@validate": [
+        "./utils/validate"
+      ],
+      "@actions": [
+        "./actions"
+      ],
+      "@app/*": [
+        "./app/*"
+      ]
+    },
+    "outDir": "dist/commonjs",
+    "rootDir": "src",
+    "baseUrl": "./",
+    "target": "ESNext",
+    "module": "commonjs",
+    "allowJs": true,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true
+  },
+}

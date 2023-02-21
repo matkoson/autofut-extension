@@ -1,0 +1,56 @@
+{
+  "name": "autofut",
+  "version": "1.0.0",
+  "description": "A Chrome extension for automatic mundane FIFA FUT Web Companion App tasks.",
+  "repository": "https://github.com/matkoson/autofut",
+  "author": "matkoson",
+  "license": "MIT",
+  "private": true,
+  "type": "commonjs",
+  "files": [
+    "dist/commonjs"
+  ],
+  "main": "./dist/commonjs/index.js",
+  "exports": {
+    ".": {
+      "require": "./dist/commonjs/index.js"
+    }
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit -w",
+    "typecheck:once": "tsc --noEmit",
+    "prettier": "prettier --write \"**/*.{ts,js}\"",
+    "lint": "eslint \"**/*.{ts,js}\"",
+    "lint:fix": "yarn lint --fix",
+    "type": "tsc --noEmit",
+    "type:w": "tsc --noEmit -w",
+    "build": "yarn lint:fix && tsc -p tsconfig.build.json",
+    "build:w": "tsc --outDir dist/commonjs -w",
+    "vite": "vite build",
+    "clean": "rimraf dist/commonjs && rimraf dist/vite && rimraf extension/content_scripts/*",
+    "emit": "sh scripts/emit.sh",
+    "postbuild": "replace-tsconfig-paths -c tsconfig.build.paths.json",
+    "updateNas": "sh scripts/update_nas.sh",
+    "updateRemoteTimestamp": "sh scripts/update_remote_timestamp.sh",
+    "server:start": "yarn --cwd backend start",
+    "watch": "sh scripts/watch.sh"
+  },
+  "devDependencies": {
+    "@types/chrome": "^0.0.211",
+    "@rollup/plugin-commonjs": "^24.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.49.0",
+    "@typescript-eslint/parser": "^5.49.0",
+    "eslint": "^8.33.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-import-resolver-typescript": "^3.5.3",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-prettier": "^4.2.1",
+    "path": "^0.12.7",
+    "prettier": "^2.8.3",
+    "replace-tsconfig-paths": "^1.2.6",
+    "rimraf": "^4.1.2",
+    "tsconfig-paths": "^4.1.2",
+    "typescript": "^4.9.4",
+    "vite": "^4.1.0"
+  }
+}
