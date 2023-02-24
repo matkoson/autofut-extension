@@ -7,7 +7,7 @@ Backend part of [AutoFut](https://github.com/matkoson/autofut-backend).
 
 # Technologies
 
-- Chrome Extension API
+- [Chrome Extensions API](https://developer.chrome.com/docs/extensions/reference/)
 - TypeScript
 - Vite
 - ESLint
