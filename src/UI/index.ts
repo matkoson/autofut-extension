@@ -1,4 +1,4 @@
-import { syncClub } from '@app/generateClubReport'
+import { syncClub } from '@app/syncClub'
 import Logger from '@logger'
 
 const { logInfo } = Logger
@@ -20,7 +20,7 @@ class UI {
 
     const button = document.createElement('button')
     button.setAttribute('class', 'btn-standard mini call-to-action')
-    button.setAttribute('id', 'autofut-btn-generate-club-report')
+    button.setAttribute('id', 'autofut-btn-sync-club')
     button.textContent = 'Sync Club'
 
     button.addEventListener('click', async () => {

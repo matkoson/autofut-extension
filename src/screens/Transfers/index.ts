@@ -323,6 +323,26 @@ class Transfers {
       }
     }, 500)
   }
+  clickNextPage = () => {
+    console.log('clicking next page')
+    const buyNowButton = document.querySelectorAll<HTMLElement>(
+      'button[class="flat pagination next"]'
+    )[0]
+    if (!buyNowButton) {
+      logError('No "Next" pagination button found! Aborting!')
+      return
+    }
+    utils.simulateClick(buyNowButton)
+
+    utils.waitFor(() => {
+      const yesButton = selectYesButton()
+      if (yesButton) {
+        utils.simulateClick(yesButton)
+      } else {
+        logError('No modal confirmation "Yes" button found!')
+      }
+    }, 500)
+  }
   makeClubSearchActions = () => {
     return this.clubSearchActionsList.reduce(
       (accumulator, { actionName, quality, rarity }) => {
@@ -461,6 +481,7 @@ class Transfers {
       clickTransferMarketTile: this.clickTransferMarketTile,
       clickTransferTargetsTile: this.clickTransferTargetsTile,
       clickSearchTransferMarketButton: this.clickSearchTransferMarketButton,
+      clickNextPage: this.clickNextPage,
     }
   }
 }

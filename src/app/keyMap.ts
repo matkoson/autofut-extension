@@ -4,17 +4,26 @@ export const keyMap = {
   // BLOCKED CHARS: t, r, s, t, c, l, b, n, q
   'g,i,n': 'clickLoginButton',
   // NAVIGATION bar ##############################
-  's,c': 'syncClub',
+  's,c': 'clickSyncClubButton',
   'h': 'goBack',
-  'r,t': 'navigateHome',
-  's,q': 'navigateSquads',
-  's,b,c': 'navigateSbc',
-  't,r': 'navigateTransfers',
-  's,t': 'navigateStadium',
-  's,o': 'navigateStore',
-  'c,l': 'navigateClub',
-  'l,r': 'navigateLeaderboards',
-  's,s': 'navigateSettings',
+  /* navigate home */
+  'n,r,t': 'navigateHome',
+  /* navigate squads */
+  'n,s,q': 'navigateSquads',
+  /* navigate sbc */
+  'n,s,b': 'navigateSbc',
+  /* navigate transfers */
+  'n,t,r': 'navigateTransfers',
+  /* navigate stadium */
+  'n,s,t': 'navigateStadium',
+  /* navigate store */
+  'n,s,o': 'navigateStore',
+  /* navigate club */
+  'n,c,l': 'navigateClub',
+  /* navigate leaderboard */
+  'n,l,r': 'navigateLeaderboards',
+  /* navigate settings */
+  'n,s,s': 'navigateSettings',
   // TRANSFERS tab ##############################
   't,m': 'clickTransferMarketTile',
   't,l': 'clickTransferListTile',
@@ -41,6 +50,7 @@ export const keyMap = {
   'a,p': 'addPlayer',
   's,t,l': 'sendToTransferList',
   's,m,c': 'clickSendToMyClubButton',
+  'l': 'clickNextPage',
   // Navigate on player items list
   'j': 'nextPlayer',
   'k': 'previousPlayer',
@@ -57,6 +67,8 @@ export const keyMap = {
   ';,g,r': 'clubSearchGoldRarePlayerItems',
   ';,g,c': 'clubSearchGoldCommonPlayerItems',
 } as Record<string, string>
+
+console.log('keyMap', keyMap)
 
 export type BindingsKeys = keyof typeof keyMap
 export type Bindings = typeof keyMap extends Record<BindingsKeys, infer T>
