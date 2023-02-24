@@ -33,7 +33,8 @@
     "updateNas": "sh scripts/update_nas.sh",
     "updateRemoteTimestamp": "sh scripts/update_remote_timestamp.sh",
     "server:start": "yarn --cwd backend start",
-    "watch": "sh scripts/watch.sh"
+    "watch": "sh scripts/watch.sh",
+    "alt_watch": "AUTOFUT_ALT=true sh scripts/watch.sh"
   },
   "devDependencies": {
     "@types/chrome": "^0.0.211",

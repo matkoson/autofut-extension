@@ -33,8 +33,8 @@ export const selectSendToMyClubButton = () => {
   })[0]
 }
 
-export const selectGenerateClubReportButton = () => {
-  const button = document.getElementById('autofut-btn-generate-club-report')
+export const selectSyncClubButton = () => {
+  const button = document.getElementById('autofut-btn-sync-club')
 
   return button
 }

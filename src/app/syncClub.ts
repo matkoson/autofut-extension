@@ -8,7 +8,7 @@ const { logDebug, logError, logInfo, logSuccess } = Logger
 export const syncClub = async () => {
   try {
     const storage = new Storage()
-    logDebug('generateClubReport triggered!')
+    logDebug('syncClub triggered!')
     const dis = Storage.Selectors.selectDis()
 
     if (!dis) {

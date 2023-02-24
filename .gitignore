@@ -1,15 +1,14 @@
 *.crx
-node_modules
 .cake_task_cache
 *.iml
-extension/dist
-.idea
 .env
 yarn.error
 existingExtensions
-extension/bundle.js
-TODO
 yarn-error.log
 
+node_modules
+.idea
+TODO
 debug
 dist
+extension

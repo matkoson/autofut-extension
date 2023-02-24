@@ -1,4 +1,4 @@
-import { selectGenerateClubReportButton } from '@selectors'
+import { selectSyncClubButton } from '@selectors'
 import Logger from '@logger'
 
 const { logError } = Logger
@@ -8,21 +8,21 @@ class Home {
     return ''
   }
 
-  syncClub = () => {
-    const generateClubReport = selectGenerateClubReportButton()
+  clickSyncClubButton = () => {
+    const syncClubButton = selectSyncClubButton()
 
-    if (generateClubReport === null) {
+    if (syncClubButton === null) {
       logError('Could not find generate club report button')
       return
     }
 
-    generateClubReport.click()
+    syncClubButton.click()
   }
 
   getActions() {
     return {
-      clickFavourites: this.clickTransferList.bind(this),
-      clickGenerateClubReport: this.syncClub.bind(this),
+      clickTransferList: this.clickTransferList.bind(this),
+      clickSyncClubButton: this.clickSyncClubButton.bind(this),
     }
   }
 }
