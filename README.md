@@ -7,13 +7,8 @@ Backend part of [AutoFut](https://github.com/matkoson/autofut-backend).
 
 # Technologies
 
-- Node.js (v16.13.0 or higher)
+- Chrome Extension API
 - TypeScript
-- Rollup
-- Puppeteer
-- Puppeteer-Cluster
-- Express
-- Prompts
-- Commander
-- ESlint
+- Vite
+- ESLint
 - Prettier
